@@ -21,7 +21,7 @@ public class sistema extends javax.swing.JFrame {
     conexionSQL cc = new conexionSQL();
     Connection con = cc.conexion();
     
-    public sistema() {
+    public sistema() { 
         initComponents();
     }
 
