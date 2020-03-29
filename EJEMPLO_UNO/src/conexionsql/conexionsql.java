@@ -19,7 +19,7 @@ public class conexionsql {
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conectar = (Connection)DriverManager.getConnection("jdbc:mysql://127.0.0.1/demovujs", "administrador","1982");
+            conectar = (Connection)DriverManager.getConnection("jdbc:mysql://localhost/demovujs", "root","");
             JOptionPane.showMessageDialog(null, "Conexion exitosa");
         }
         catch(Exception e){
