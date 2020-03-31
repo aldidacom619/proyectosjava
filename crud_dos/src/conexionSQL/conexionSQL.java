@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conexionSQL;
+package conexionsql;
 
-import java.sql.Connection;
+import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 
@@ -13,19 +13,19 @@ import javax.swing.JOptionPane;
  *
  * @author DIEGO
  */
-public class conexionSQL {
-    Connection conectar = null;
-    
-    public Connection conexion(){
-        try{
+public class conexionsql {
+    Connection conectar =null;
+    public Connection conexion() 
+    {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             conectar = (Connection)DriverManager.getConnection("jdbc:mysql://localhost/demovujs", "root","");
             JOptionPane.showMessageDialog(null, "Conexion exitosa");
         }
-        catch (Exception e){
+        catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error Conexion fallida"+ e.getMessage());
-        }
-        return conectar;
+        }        
+        return conectar;               
     }
-    
 }
+
